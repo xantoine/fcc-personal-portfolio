@@ -1,0 +1,107 @@
+/*==========
+    GLOBAL
+  ==========*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --main-text: #090934;
+    --ltGrn: #D4F7EC;
+    --grn: #448D76;
+    --ltBlu: #1258DC;
+    --Blu: #2E2FE3;
+    
+    --posRel: relative;
+    --posAbs: absolute;
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--ltGrn);
+    color: var(--main-text);
+}
+
+
+.disp_flex {
+    display: flex;
+}
+
+/* height */
+
+.page_height {
+    height: 100vh;
+}
+
+/* images */
+
+.tile-img {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+/*==========
+  TYPOGRAPHY
+  ==========*/
+
+body {
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+/* heading */
+
+.title-header {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3.8rem;
+    line-height: .4
+}
+
+.title-subheader {
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: .4;
+}
+
+li a {
+    text-decoration: none;
+    margin-left : 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navi-link {
+    font-size: 1.8rem;
+}
+
+.contact-link, .btm-navi-link {
+    font-size: 1.4rem;
+}
+
+
+/*==========
+    LAYOUT
+  ==========*/
+
+/* navigation */
+
+/* menu (top) */
+
+
+.navi-list {
+    justify-content: flex-end;
+    padding-right: .5em;
+}
+/* contact */
+
+/* bottom */
