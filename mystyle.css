@@ -179,22 +179,29 @@ ul {
     -webkit-box-shadow: 0 1px 4px var(--grn);
 }
 
-.page_mod2 {
-    height: 180vh;
-}
 /* end of <header> */
 
-/* main */
+/* <main> begins */
 
-/*
+.page_mod2 {
+    display: relative;
+    height: 180vh;
+}
+
+.center h2 {
+    width: max-content;
+}
+
 .center {
     position: absolute;
-    top: 100%;
-    left: 0%;
-    transform: translate(50%, 100%);
-    width: max-content;
-    margin: auto;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    
 }
+/*
+
+
 
  contact 
 
