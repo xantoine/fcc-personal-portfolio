@@ -31,12 +31,31 @@ body {
     display: flex;
 }
 
-/* height */
+/* height and widths for pages */
 
 .page_mod {
+    width: 900px;
+    max-width: 90%;
     height: 100vh;
 }
 
+.page_mod2{
+    width: 900px;
+    max-width: 90%;
+    height: 200vh;
+}
+
+@media ( orientation : landscape ) {
+    
+    .page_mod {
+        height: 125vh;
+    }
+    
+    .page_mod2 {
+        height 250vh;
+    }
+    
+} 
 /* images */
 
 .tile-img {
@@ -44,7 +63,9 @@ body {
     max-width: 300px;
 }
 
-
+.titles {
+    width: max-content; 
+}
 /*==========
   TYPOGRAPHY
   ==========*/
@@ -116,7 +137,10 @@ ul {
 
 .page_mod {
     display: relative;
+    margin: auto;
 }
+
+
 
 .welcome {
     width: 100%;
@@ -143,6 +167,7 @@ ul {
     width: 100%;
     height: content;
     margin: 0;
+    z-index: 1;
     
 }
 
@@ -185,33 +210,90 @@ ul {
 
 .page_mod2 {
     display: relative;
-    height: 180vh;
+    margin: auto;
 }
 
 .center h2 {
     width: max-content;
 }
 
+
 .center {
     position: absolute;
-    top: 90%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 90%);
+    transform: translate(-50%, 50%);
     
 }
-/*
+
+.center .titles {
+    position: relative;
+    top: 200%;
+    transform: translate(0, 200%);
+}
+
+.tile-container {
+    position: relative;
+    top: 50%;
+    transform:translate(0 , 50%);
+    
+}
+
+@media (min-width : 600px) {
+   
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    } 
+       
+}
+    
 
 
+/* footer begins */
+/* contact */
 
- contact 
 
-.contact-section {
+.center-btm {
     position: absolute;
     top: 300%;
     left: 0%;
-    transform: translate(50%, 300%);
-    width: max-content;
-    margin: auto;
+    transform: translate(0%, 50%);
+    
 }
-*/
 
+
+@media (min-width : 600px) {
+    .center-btm {
+        left: 0%;
+        transform: translate(50%, 50%);
+      
+    }
+}
+
+.attributions {
+    position: relative;
+    top: 100%;
+    transform: translate(0, 100%);
+    
+}
+
+@media ( min-width : 600px ) {
+   
+    .attributions {
+        top: 200%;
+        transform: translate(0, 200%);
+        
+    }
+    
+}
+
+
+/*.btm-navi {
+    position: relative;
+    top: 100%;
+    left: 75%;
+    transform: translate(75, 100%);
+}*/
