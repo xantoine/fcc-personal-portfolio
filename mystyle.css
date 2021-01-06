@@ -26,36 +26,48 @@ body {
     width: 100%;
 }
 
+/* set positions */
+
+.navi {
+    position: fixed;
+}
+
+.header,
+.main,
+.footer {
+    position: relative;
+}
 
 .disp_flex {
     display: flex;
 }
 
-/* height and widths for pages */
+/* page height and widths */
 
-.page_mod {
+.page_hw1 {
     width: 900px;
-    max-width: 90%;
+    max-width: 100%;
     height: 100vh;
 }
 
-.page_mod2{
+.page_hw2{
     width: 900px;
-    max-width: 90%;
+    max-width: 100%;
     height: 200vh;
 }
 
-@media ( orientation : landscape ) {
+
+/*@media ( orientation : landscape ) {
     
-    .page_mod {
+    .page_hw1 {
         height: 125vh;
     }
     
-    .page_mod2 {
+    .page_hw2 {
         height 250vh;
     }
     
-} 
+} */
 /* images */
 
 .tile-img {
@@ -133,37 +145,13 @@ ul {
 /*==========
     LAYOUT
   ==========*/
-/* <header>*/
-
-.page_mod {
-    display: relative;
-    margin: auto;
-}
-
-
-
-.welcome {
-    width: 100%;
-}
-/* titles */
-
-.welcome > :first-child {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%, 50%);
-    -ms-transform: translate(50%, 50%);
-    -moz-transform: translate(50%, 50%);
-    -webkit-transform: translate(50%, 50%);
-    
-}
 
 /* menu (top) */
 
+/* navi position fix see global */
+
 .navi {
-    position: fixed;
+    top: 0;
     width: 100%;
     height: content;
     margin: 0;
@@ -204,12 +192,51 @@ ul {
     -webkit-box-shadow: 0 1px 4px var(--grn);
 }
 
-/* end of <header> */
 
-/* <main> begins */
+/* <header>*/
 
-.page_mod2 {
-    display: relative;
+/* header, main, footer position relative see global*/
+
+header .titles {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: max-content;
+    height: content;
+}
+
+@media (orientation : landscape ) {
+    
+    header .titles {
+        top: 55%;
+        left: 50vmax;
+        transform: translate(-50%, -55%);
+    }
+}
+
+/* <main> */
+.project-section {
+    position: inherit;
+}
+
+main .titles {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
+@media (orientation : landscape) {
+    main .titles {
+        top: 27.5%;
+        left: 50vmax;
+        transform: translate(-50%, -27.5%);
+    } 
+}
+
+/*.page_mod2 {
+    position: absolute;
     margin: auto;
 }
 
@@ -219,7 +246,7 @@ ul {
 
 
 .center {
-    position: absolute;
+    position: inherit;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
@@ -227,13 +254,13 @@ ul {
 }
 
 .center .titles {
-    position: relative;
+    position: inherit;
     top: 200%;
     transform: translate(0, 200%);
 }
 
 .tile-container {
-    position: relative;
+    position: inherit;
     top: 50%;
     transform:translate(0 , 50%);
     
@@ -249,14 +276,20 @@ ul {
     } 
        
 }
-    
+    */
 
 
 /* footer begins */
 /* contact */
 
-
+/*
 .center-btm {
+    position: absolute;
+    top: 
+}
+*/
+
+/*.center-btm {
     position: absolute;
     top: 300%;
     left: 0%;
@@ -267,8 +300,8 @@ ul {
 
 @media (min-width : 600px) {
     .center-btm {
-        left: 0%;
-        transform: translate(50%, 50%);
+        left: 25%;
+        transform: translate(25%, 50%);
       
     }
 }
@@ -288,7 +321,7 @@ ul {
         
     }
     
-}
+}*/
 
 
 /*.btm-navi {
