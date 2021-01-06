@@ -228,11 +228,13 @@ main .titles {
 }
 
 @media (orientation : landscape) {
+    
     main .titles {
         top: 27.5%;
         left: 50vmax;
         transform: translate(-50%, -27.5%);
     } 
+    
 }
 
 /*.page_mod2 {
