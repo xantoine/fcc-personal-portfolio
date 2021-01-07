@@ -27,49 +27,55 @@
                     <h2 class="title-header">My latest work</h2>
                     <p class="title-subheader">please scroll down and click a thumbnail</p>
                 </div>
-                <div class="tile-container page_hw1">
-                    <div id="project-tile" class="tile-1">
-                        <h3 class="project-tile-header">Product Landing Page</h3>
-                        <a href="https://codepen.io/XaviFact91/pen/NWRrQyV" class="tile-link" target="_blank">
-                            <img class="tile-img" src="img/img_prod_land_small.jpg" alt="Screenshot of project"/>
-                        </a>        
-                     </div>
-                     <div id="project-tile-2" class="tile-2">
-                        <h3 class="project-tile-header">Technical Document</h3>
-                        <a href="https://codepen.io/XaviFact91/pen/yLaMOLW" class="tile-link" target="_blank">
-                            <img class="tile-img" src="img/img_tech_doc_small.jpg" alt="Screenshot of project"/>
-                        </a>        
+                <div class="parent page_hw1">
+                    <div class="tile-container">
+                        <div id="project-tile" class="tile-1">
+                            <h3 class="project-tile-header">Product Landing Page</h3>
+                            <a href="https://codepen.io/XaviFact91/pen/NWRrQyV" class="tile-link" target="_blank">
+                                <img class="tile-img" src="img/img_prod_land_small.jpg" alt="Screenshot of project"/>
+                            </a>        
+                         </div>
+                         <div id="project-tile-2" class="tile-2">
+                            <h3 class="project-tile-header">Technical Document</h3>
+                            <a href="https://codepen.io/XaviFact91/pen/yLaMOLW" class="tile-link" target="_blank">
+                                <img class="tile-img" src="img/img_tech_doc_small.jpg" alt="Screenshot of project"/>
+                            </a>        
+                        </div> 
                     </div> 
                 </div>
             </section>
         </main>
         <footer id="footer" class="footer page_hw1">
-            <div class="center-btm">
                 <section id="contact" class="contact-section">
-                    <div class="titles title-btm">
-                        <h2 class="title-header">Contact</h2>
-                        <p class="title-subheader">Get in touch</p>
+                    <div class="parent-contact">
+                        <div class="titles title-btm">
+                            <h2 class="title-header">Contact</h2>
+                            <p class="title-subheader">Get in touch</p>
+                        </div>
+                        <ul class="profile-list disp_flex">
+                            <li>
+                                <a id="profile-link" href="https://github.com/xantoine" class="contact-link github" target="_blank"><i class="fab fa-github-alt"></i>GitHub</a>  
+                            </li>
+                            <li>
+                                <a id="email-link" href="mailto:xantoine91@outlook.com" class="contact-link outlook" target="_blank"><i class="fas fa-at"></i>Email me</a>  
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="profile-list disp_flex">
-                        <li>
-                            <a id="profile-link" href="https://github.com/xantoine" class="contact-link github" target="_blank"><i class="fab fa-github-alt"></i>GitHub</a>  
-                        </li>
-                        <li>
-                            <a id="email-link" href="mailto:xantoine91@outlook.com" class="contact-link outlook" target="_blank"><i class="fas fa-at"></i>Email me</a>  
-                        </li>
-                    </ul>
                 </section>
-                <aside class="attributions">
-                    <p class="disclaimer">**this mock portfolio is an assignment for FreeCodeCamp. All third party assets are used solely for educational purposes.</p>
-                    <p class="disclaimer">website by Xavier</p>
-                </aside>
-                <nav id="btm-navbar" class="btm-navi">
-                    <ul class="btm-navi-list disp_flex">
-                        <li><a href="#welcome-section" class="btm-navi-link">about</a></li>
-                        <li><a href="#projects" class="btm-navi-link">work</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <section class="bottom">
+                    <div class="parent-btm disp_flex">
+                        <aside class="attributions">
+                            <p class="disclaimer">**this mock portfolio is an assignment for FreeCodeCamp. All third party assets are used solely for educational purposes.</p>
+                            <p class="disclaimer">website by Xavier</p>
+                        </aside>
+                        <nav id="btm-navbar" class="btm-navi">
+                            <ul class="btm-navi-list disp_flex">
+                                <li><a href="#welcome-section" class="btm-navi-link">about</a></li>
+                                <li><a href="#projects" class="btm-navi-link">work</a></li>
+                            </ul>
+                        </nav>
+                    </div>  
+                </section>
         </footer>
     </body>
 </html>
