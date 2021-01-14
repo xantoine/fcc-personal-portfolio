@@ -120,6 +120,8 @@ body {
     text-shadow: .5px 3px 5px var(--blu);
 }
 
+.title-header {}
+
 .title-subheader {
     text-align: center;
     font-weight: bolder;
@@ -152,7 +154,8 @@ ul {
 }
 
 .navi-link {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-size: 32px;
     color: aliceblue;
     transition: color .5s linear .1s;
     -moz-transition: color .5s linear .1s;
@@ -163,6 +166,20 @@ ul {
     color: var(--blu);
 }
 
+@media screen and ( min-width : 600px ) {
+    
+    .navi-link {
+        font-size: calc( 32px + 16px * ((100vw - 600px) / 680) );  
+    }
+}
+
+@media screen and ( min-width : 1280px ) {
+    
+    .navi-link {
+        font-size: 48px;
+    }
+    
+}
 
 /*==========
     LAYOUT
@@ -190,7 +207,7 @@ ul {
 }
 
 .navi-link {
-    margin: auto;
+    margin: 2em auto;
 }
 
 @media ( min-width: 600px ) {
@@ -287,8 +304,6 @@ main .titles {
 
 .parent {
     position: inherit;
-    
-    
 }
 
 /*.tile-container {
