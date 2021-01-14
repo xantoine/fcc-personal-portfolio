@@ -120,7 +120,6 @@ body {
     text-shadow: .5px 3px 5px var(--blu);
 }
 
-.title-header {}
 
 .title-subheader {
     text-align: center;
@@ -143,11 +142,16 @@ ul {
 }
 
 
-.contact-link, .btm-navi-link {
+.contact-link,
+.btm-navi-link {
     font-size: 1.4rem;
 }
 
 /* navi menu (top) */
+
+.navi {
+    font-size: 1vw;
+}
 
 .navi-list {
     text-align: center;
@@ -155,31 +159,36 @@ ul {
 
 .navi-link {
     font-size: 2rem;
-    font-size: 32px;
+    font-size: calc(1rem + 3vw);
     color: aliceblue;
-    transition: color .5s linear .1s;
-    -moz-transition: color .5s linear .1s;
     -webkit-transition: color .5s linear .1s;
+    -moz-transition: color .5s linear .1s;
+    transition: color .5s linear .1s;
 }
 
 .navi-link:hover {
     color: var(--blu);
 }
 
-@media screen and ( min-width : 600px ) {
+@media screen and ( min-width : 18.75rem ) {
     
     .navi-link {
-        font-size: calc( 32px + 16px * ((100vw - 600px) / 680) );  
+        font-size: calc( 2rem + 1rem * ((100vw - 18.75rem) / 43.75rem) );  
     }
+    
 }
 
-@media screen and ( min-width : 1280px ) {
+@media screen and ( min-width : 62.5rem ) {
     
     .navi-link {
-        font-size: 48px;
+        font-size: 3rem;
     }
     
 }
+
+/*
+
+*/
 
 /*==========
     LAYOUT
@@ -192,7 +201,7 @@ ul {
 .navi {
     top: 0;
     width: 100%;
-    height: content;
+    height: auto;
     margin: 0;
     z-index: 1;
     
@@ -226,9 +235,10 @@ ul {
 
 .navi {
     background: var(--grn);
-    box-shadow: 0 1px 4px var(--grn);
-    -moz-box-shadow: 0 1px 4px var(--grn);
     -webkit-box-shadow: 0 1px 4px var(--grn);
+    -moz-box-shadow: 0 1px 4px var(--grn);
+    box-shadow: 0 1px 4px var(--grn);
+    box-sizing: border-box;
 }
 
 
@@ -326,9 +336,8 @@ main .titles {
     -o-transform: var(--cntr);
     transform: var(--cntr);
     width: 100%;
+    border: 2px solid ghostwhite;
     max-width: 1000px;
-    justify-items: center;
-    justify-content: center;
 }
 
 
@@ -357,8 +366,10 @@ main .titles {
 
 .tile-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: auto;
+    justify-items: center;
+    
 }
 
 
