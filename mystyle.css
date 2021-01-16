@@ -90,6 +90,15 @@ body {
     max-width: 200px;
 }
 
+@media screen
+and ( orientation : landscape )
+and ( min-width : 600px ) {
+    
+    .tile-img {
+        max-width: 300px;
+    }
+    
+}
 /*@media ( min-width : 800px ) {
     
     .tile-img {
@@ -186,9 +195,11 @@ ul {
     
 }
 
-/*
+/* main */
 
-*/
+.project-tile-header {
+    text-align: center;
+}
 
 /*==========
     LAYOUT
@@ -336,7 +347,7 @@ main .titles {
     -o-transform: var(--cntr);
     transform: var(--cntr);
     width: 100%;
-    border: 2px solid ghostwhite;
+    border: 2px solid green;
     max-width: 1000px;
 }
 
@@ -353,7 +364,8 @@ main .titles {
     }
     
     [ class *= "tile-" ] {
-        width: 90%;
+        width: 100%;
+        place-self:;
     }
 
 }
@@ -369,7 +381,9 @@ main .titles {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto;
     justify-items: center;
-    
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1em;
 }
 
 
@@ -382,6 +396,20 @@ main .titles {
             grid-template-columns : 1fr;
         }
     
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.sub-child-1 {
+    order: 2;
+}
+
+[ class *= "sub-child-" ] {
+    flex: 1 auto 70%;
 }
 
 /* contact */
