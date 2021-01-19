@@ -400,6 +400,7 @@ main .titles {
     justify-content: center;
     align-items: center;
     grid-gap: 1em;
+    max-height: 100vh;
 }
 
 
@@ -421,7 +422,12 @@ main .titles {
 }
 
 .sub-child-1 {
+    margin-top: 0;
     order: 2;
+}
+
+.sub-child-2 {
+    margin-bottom: 0;
 }
 
 [ class *= "sub-child-" ] {
@@ -433,20 +439,16 @@ main .titles {
 [ class ^= "tile_" ] {
     border: 5px solid #53ac90;
     border-style: solid dashed;
-    border-radius: 2px;
-    transition: .5s box-shadow linear .1s;
+    border-radius: 2px;  
 }
 
-[ class ^= "tile_" ] {
-    -webkit-box-shadow: 0 1px 4px var(--grn);
-    -moz-box-shadow: 0 1px 4px var(--grn);
-    box-shadow: 0 1px 4px var(--grn);
-}
+
 
 [ class ^= "sub-child" ] {
     background-color: #53ac90;
     margin: 2px;
 }
+
 
 /* contact */
 .contact-parent {
@@ -508,4 +510,102 @@ main .titles {
 
 .btm-navi-link {
     align-self: flex-end;
+}
+
+/*==========
+  Animations
+  ==========*/
+
+.shdwFX_tile {
+    position: relative;
+    -webkit-box-shadow: 0 1px 2px var(--grn);
+    -moz-box-shadow: 0 1px 2px var(--grn);
+    box-shadow: 0 1px 2px var(--grn);
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+}
+
+.shdwFX_tile::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #11221d;
+    /*border-radius: 2px;*/
+    opacity: 0;
+    transition: all .5s linear;
+    box-shadow: 0px 10px 15px #11221d;
+}
+
+.shdwFX_tile::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 15px var(--grn), 0px 10px 15px #11221d;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    opacity: 0;
+    background-color: rgba(17, 34, 29, 0.5) ;
+    transition: all .5s linear .2s;
+} 
+
+.overlay::after {
+    display: block;
+    content: "codepen.io";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Quattrocento Sans', sans-serif;
+    color: aliceblue;
+    font-size: calc(1rem + 1vw);
+    font-weight: bolder;
+    opacity: .9;    
+}
+
+.shdwFX_tile:hover {
+    transform: scale(1.25, 1.25);
+    z-index: 1;
+}
+
+.fa-codepen {
+    display: block;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    font-size: calc(10rem + 4vw);
+    font-weight: lighter;
+    color: aliceblue;
+    text-align: center;
+    opacity: .9;
+    transform: translate(-50%, -50%);
+}
+
+
+.shdwFX_tile:hover::before {
+    opacity: .5;
+}
+
+.overlay:hover ,.shdwFX_tile:hover::after {
+    opacity: 1;
+}
+
+.tile-link {
+    z-index: 1;
 }
