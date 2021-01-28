@@ -16,6 +16,7 @@
     --grn: #448D76;
     --ltBlu: #1258DC;
     --blu: #2E2FE3;
+    --ice: #0088ff; 
     
     --posAbs: absolute;
     
@@ -40,6 +41,8 @@ body {
 .main,
 .footer {
     position: relative;
+    width: 100%;
+    margin: 0;
 }
 
 @media ( orientation : portrait ) {
@@ -61,13 +64,11 @@ body {
 
 .page_hw1 {
     width: 100%;
-    max-width: 900px;
     height: 100vh;
 }
 
 .page_hw2 {
-    width: 100%;
-    max-width: 900px;
+    width: 100%; 
     height: 200vh;
 }
 
@@ -218,6 +219,23 @@ ul {
     text-align: center;
 }
 
+/* footer */
+
+/* contact */
+.disclaimer {
+    font-weight: bold;
+    color: var(--ice);
+    text-shadow: .5px 1px 2px var(--blu);
+}
+
+/* bottom navigation */
+
+.btm-navi-link {
+    font-weight: bold;
+    color: var(--ice);
+    text-shadow: .5px 1px 2px var(--blu);
+}
+
 /*==========
     LAYOUT
   ==========*/
@@ -344,16 +362,6 @@ main .titles {
     position: inherit;
 }
 
-/*.tile-container {
-    position: absolute;
-    width: 100%;
-    max-width: 200px;
-    top: calc(50% + 10vh);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}*/
-
 .tile-container {
     position: absolute;
     top: 50%;
@@ -469,6 +477,7 @@ main .titles {
     transform: var(--cntr);
 } 
 
+
 @media ( orientation : landscape ) {
     
     .contact-children {
@@ -503,14 +512,33 @@ main .titles {
     margin-bottom: 0;
 }
 
+/* btm-navi */
+
+.btm-navi {
+    display: none;
+}
+
+@media screen and ( orientation : landscape )
+    and ( min-width : 1000px ) 
+    and ( min-height: 600px ) {
+
+    .btm-navi {
+        display: inline-block;
+    }
+    
+}
+
 .btm-navi-list {
     margin-bottom: 0;
-    padding-right: 1em;
+    padding-right: 1.5em;
 }
 
 .btm-navi-link {
     align-self: flex-end;
 }
+
+/* attributions */
+
 
 /*==========
   Animations
@@ -554,7 +582,6 @@ main .titles {
 }
 
 .sub-child-2 {
-    width: 100%;
     height: 100%;
 }
 
@@ -571,9 +598,16 @@ main .titles {
     background: linear-gradient( 45deg, rgba(227, 49, 49, 0.7), rgba(46, 47, 227, 0.7), black);
     box-shadow: 1px 2px 20px rgba(43, 85, 72, 0.5),
                 -1px 2px 20px rgba(43, 85, 72, 0.5);
-    transform: translate(-1.6%, -1.5%);
+    transform: translate(-1.8%, -1.5%);
     transition: all .5s linear .2s;
 } 
+
+@media screen and ( orientation: landscape ) {
+    
+    .overlay {
+        transform: translate(-1.5%, -1.4%);
+    }
+}
 
 .overlay::after {
     display: block;
@@ -581,6 +615,7 @@ main .titles {
     position: absolute;
     top: 0;
     right: 0;
+    padding-right: .25em;
     font-family: 'Quattrocento Sans', sans-serif;
     color: aliceblue;
     font-size: calc(1rem + 1vw);
@@ -594,7 +629,7 @@ main .titles {
 }
 
 .fa-codepen {
-    display: block;
+    display: inline-block;
     position: absolute;
     top: 50%; 
     left: 50%;
