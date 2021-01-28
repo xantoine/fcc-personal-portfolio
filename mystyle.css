@@ -615,7 +615,7 @@ main .titles {
     position: absolute;
     top: 0;
     right: 0;
-    padding-right: .25em;
+    padding-right: .15em;
     font-family: 'Quattrocento Sans', sans-serif;
     color: aliceblue;
     font-size: calc(1rem + 1vw);
