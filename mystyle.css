@@ -225,9 +225,14 @@ ul {
 
 /* profile list */
 
+.profile-list {
+    text-align: center;
+}
+
 .contact-link {
     font-size: 1.5rem;
     font-weight: bold;
+    font-style: italic;
     color: var(--ice);
     text-shadow: .5px 1px 2px var(--blu);
 }
@@ -506,7 +511,13 @@ main .titles {
     
 }
 
-/* profile links */
+/* contact links */
+
+.profile-list-container {
+    position: inherit;
+    width: 100%;
+    top: 100%;
+}
 
 .profile-list {
     width: 100%;
@@ -675,6 +686,16 @@ main .titles {
 
 .tile-link {
     z-index: 1;
+}
+
+/* contact */
+
+.contact-link {
+    transition: all .5s linear .2s;
+}
+
+.contact-link:hover {
+    transform: scale(1.2);
 }
 
 /* btm-navi */
