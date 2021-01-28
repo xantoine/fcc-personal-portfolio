@@ -222,6 +222,21 @@ ul {
 /* footer */
 
 /* contact */
+
+/* profile list */
+
+.contact-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--ice);
+    text-shadow: .5px 1px 2px var(--blu);
+}
+
+.contact-link:active {
+    color: var(--ice);
+}
+
+/* attributions */
 .disclaimer {
     font-weight: bold;
     color: var(--ice);
@@ -491,6 +506,8 @@ main .titles {
     
 }
 
+/* profile links */
+
 .profile-list {
     width: 100%;
     justify-content: space-between;  
@@ -506,6 +523,7 @@ main .titles {
     width: 100vw;
     bottom: 0;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .disclaimer {
@@ -519,8 +537,8 @@ main .titles {
 }
 
 @media screen and ( orientation : landscape )
-    and ( min-width : 1000px ) 
-    and ( min-height: 600px ) {
+    and ( min-width : 1200px ) 
+    and ( min-height: 700px ) {
 
     .btm-navi {
         display: inline-block;
@@ -539,10 +557,15 @@ main .titles {
 
 /* attributions */
 
+.attributions {
+    padding-bottom: .1em;
+}
 
 /*==========
   Animations
   ==========*/
+
+/* project-tiles */
 
 .shdwFX_tile {
     position: relative;
@@ -652,4 +675,14 @@ main .titles {
 
 .tile-link {
     z-index: 1;
+}
+
+/* btm-navi */
+
+.btm-navi-link {
+    transition: all .5s linear .1s; 
+}
+
+.btm-navi-link:hover {
+    color: var(--blu);
 }
