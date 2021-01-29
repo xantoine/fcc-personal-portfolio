@@ -16,7 +16,8 @@
     --grn: #448D76;
     --ltBlu: #1258DC;
     --blu: #2E2FE3;
-    --ice: #0088ff; 
+    --ice: #0088ff;
+    --ltIce: rgba(0, 136, 255, 0.6);
     
     --posAbs: absolute;
     
@@ -45,16 +46,6 @@ body {
     margin: 0;
 }
 
-@media ( orientation : portrait ) {
-    
-    .header,
-    .main,
-    .footer {
-        top: 160px;
-    }
-    
-}
-
 
 .disp_flex {
     display: flex;
@@ -73,17 +64,6 @@ body {
 }
 
 
-/*@media ( orientation : landscape ) {
-    
-    .page_hw1 {
-        height: 125vh;
-    }
-    
-    .page_hw2 {
-        height 250vh;
-    }
-    
-} */
 /* images */
 
 .tile-img {
@@ -113,21 +93,23 @@ and ( min-width : 600px ) {
     }
 }*/
 
+
 .titles {
     width: max-content; 
 }
 
 .border_btm {
-    border-bottom: 1vw dashed rgba(0, 136, 255, 0.6);
-    border-left: .5vw solid rgba(0, 136, 255, 0.6);
-    border-right: .5vw solid rgba(0, 136, 255, 0.6);
+    border-bottom: .75vw dashed var(--ltIce);
+    border-left: .5vw solid var(--ltIce);
+    border-right: .5vw solid var(--ltIce);
     box-shadow: 0 .5px 2px var(--ltBlu);
 }
 
 .footer {
-    border-left: .5vw solid rgba(0, 136, 255, 0.6);
-    border-right: .5vw solid rgba(0, 136, 255, 0.6);
+    border-left: .5vw solid var(--ltIce);
+    border-right: .5vw solid var(--ltIce);
 }
+
 /*==========
   TYPOGRAPHY
   ==========*/
@@ -257,9 +239,10 @@ ul {
 /* attributions */
 .disclaimer {
     font-weight: bold;
+    font-size: calc(0.5rem + 0.5vw );
     text-align: center;
     color: var(--ice);
-    text-shadow: .5px 1px 2px var(--blu);
+    text-shadow: .5px 1px 2px var(--ltIce);
 }
 
 @media screen and ( min-width : 1100px ) {
@@ -273,7 +256,7 @@ ul {
 
 .btm-navi-link {
     font-weight: bold;
-    color: var(--ice);
+    color: var(--ltIce);
     text-shadow: .5px 1px 2px var(--blu);
     margin-left: 1.5em;
 }
@@ -282,7 +265,6 @@ ul {
     LAYOUT
   ==========*/
 
-/* menu (top) */
 
 /* navi position fix see global */
 
@@ -331,6 +313,7 @@ ul {
 
 
 /* <header>*/
+
 
 /* header, main, footer position relative see global*/
 
@@ -414,21 +397,22 @@ main .titles {
     -ms-transform: var(--cntr);
     -o-transform: var(--cntr);
     transform: var(--cntr);
+    max-width: 1000px;
     width: 100%;
     border: 2px solid green;
-    max-width: 1000px;
 }
 
 
 @media ( orientation : landscape ) {
     
     .tile-container {
-        left: 50vmax;
+        left: 50%;
         -webkit-transform: var(--cntr);
         -moz-transform: var(--cntr);
         -ms-transform: var(--cntr);
         -o-transform: var(--cntr);
-        transform: var(--cntr);  
+        transform: var(--cntr); 
+        margin: auto;
     }
     
     [ class *= "tile_" ] {
