@@ -68,10 +68,10 @@ body {
 
 .tile-img {
     display: block;
-    margin: 1em;
+    margin: 1em auto;
     padding: .25em;
     width: 90%;
-    max-width: 200px;
+    max-width: 300px;
 }
 
 @media screen
@@ -438,10 +438,15 @@ main .titles {
     
 }
 
+/*[ class ^= "tile_" ] {
+    max-height: 100vh;
+}*/
+
 .sub-container {
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    max-width: 50vw;
 }
 
 .sub-child-1 {
@@ -453,15 +458,17 @@ main .titles {
     margin-bottom: 0;
 }
 
+/*
 [ class *= "sub-child-" ] {
     flex: 1 auto 70%;
 }
+*/
 
 
 [ class ^= "tile_" ] {
     border: 5px solid #53ac90;
     border-style: solid dashed;
-    border-radius: 2px;  
+    border-radius: 2px;
 }
 
 
