@@ -125,6 +125,7 @@ body {
     line-height: normal;
     color: var(--blu);
     text-shadow: .5px 3px 5px var(--blu);
+    margin: 0;
 }
 
 
@@ -135,6 +136,8 @@ body {
     font-size: 1.8rem;
     line-height: normal;
     text-shadow: 0 1.5px 2px var(--main-text);
+    margin: 1.5em auto 0;
+   
 }
 
 [ class ^= "tile_" ] {
@@ -307,11 +310,17 @@ ul {
 
 /* header */
 
+.main-header-parent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
 
 /* header, main, footer position relative see global */
 
-header .titles {
-    position: absolute;
+.main-header-parent .titles {
+    position: inherit;
     top: 50%;
     left: 50%;
     -webkit-transform: var(--cntr);
@@ -323,13 +332,6 @@ header .titles {
     height: content;
 }
 
-@media ( orientation : landscape ) {
-    
-    header .titles {
-        left: 50vmax;
-        transform: var(--cntr);
-    }
-}
 
 
 /* main */
@@ -342,11 +344,10 @@ header .titles {
 }
 
 .project-title-parent {
-    position: relative;
+    position: inherit;
     width: 100%;
     top: 0;
     margin: 0;
-    padding: 0;
 }
 
 main .titles {
@@ -362,26 +363,14 @@ main .titles {
     height: content;
 }
 
-@media ( orientation : landscape ) {
-    
-    main .titles {
-        left: 50vmax;
-        -webkit-transform: var(--cntr);
-        -moz-transform: var(--cntr);
-        -ms-transform: var(--cntr);
-        -o-transform: var(--cntr);
-        transform: var(--cntr);
-    }   
-    
-}
-
 .parent {
-    position: inherit;
+    position: absolute;
+    top: 50%;
     margin: 0;
 }
 
 .tile-container {
-    position: absolute;
+    position: inherit;
     top: 50%;
     left: 50%;
     -webkit-transform: var(--cntr);
@@ -391,18 +380,13 @@ main .titles {
     transform: var(--cntr);
     max-width: 1000px;
     width: 100%;
+    height: calc( 100vh - 20% );
 }
 
 
 @media ( orientation : landscape ) {
     
     .tile-container {
-        left: 50%;
-        -webkit-transform: var(--cntr);
-        -moz-transform: var(--cntr);
-        -ms-transform: var(--cntr);
-        -o-transform: var(--cntr);
-        transform: var(--cntr); 
         margin: auto;
     }
     
@@ -423,14 +407,13 @@ main .titles {
     justify-content: center;
     align-items: center;
     grid-gap: 1em;
-    max-height: 100vh;
 }
 
 
 
 @media screen
     and (orientation : portrait)
-    and ( min-height : 375px) {
+    and (min-height: 375px ){
         
         .tile-container {
             grid-template-columns : 1fr;
@@ -481,10 +464,13 @@ main .titles {
 
 /* contact */
 
+
 .contact-parent {
     position: absolute;
     top: 0;
-
+    width: 100%;
+    height: 100%;
+    
 }
 
 .contact-children {
@@ -497,21 +483,9 @@ main .titles {
     -ms-transform: var(--cntr);
     -o-transform: var(--cntr);
     transform: var(--cntr);
+    
 } 
 
-
-@media ( orientation : landscape ) {
-    
-    .contact-children {
-        left: 50vmax;
-        -webkit-transform: var(--cntr);
-        -moz-transform: var(--cntr);
-        -ms-transform: var(--cntr);
-        -o-transform: var(--cntr);
-        transform: var(--cntr);
-    }
-    
-}
 
 .contact-children .titles {
     margin: auto;
@@ -521,6 +495,8 @@ main .titles {
 .profile-list-container {
     position: inherit;
     width: 100%;
+    margin-top: 1.5em ;
+    padding-top: .75em;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -533,6 +509,11 @@ main .titles {
 
 .contact-link {
     margin-left: 0;
+}
+
+.profile-list-container  {
+    border-top: 5px solid var(--ltIce) /*#53ac90*/;
+    border-radius: 2px;
 }
 
 /* bottom */
@@ -706,6 +687,14 @@ main .titles {
    text-shadow: 0 1px 3px var(--blu),0 5px 5px var(--blu);
 }
 
+.profile-list-container {
+    transition: all .5s linear .1s;
+}
+
+.profile-list-container:hover {
+    border-top: 8px dashed aliceblue;
+    border-radius: 5px;
+}
 
 /* btm-navi */
 
